@@ -1,0 +1,35 @@
+{
+    "name": "Android Studio in Browser",
+    "image": "registry.gitpod.io/android/tools:latest",
+    
+    "features": {
+        "ghcr.io/devcontainers/features/java:1": {
+            "version": "17"
+        }
+    },
+
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "mathiasfrohlich.Kotlin",
+                "ms-vscode.vscode-gradle",
+                "naco-siren.gradle-language",
+                "visualstudioexptteam.vscodeintellicode",
+                "redhat.java",
+                "vscjava.vscode-java-pack"
+            ]
+        }
+    },
+
+    "forwardPorts": [8080, 6080],
+    "portsAttributes": {
+        "8080": {
+            "label": "Web Preview",
+            "onAutoForward": "notify"
+        }
+    },
+
+    "postCreateCommand": "echo 'Android development environment ready! Run: ./gradlew build'",
+    
+    "remoteUser": "gitpod"
+}
