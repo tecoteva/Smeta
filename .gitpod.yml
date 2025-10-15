@@ -1,0 +1,12 @@
+image: gitpod/workspace-android
+tasks:
+  - name: Setup Android SDK
+    init: |
+      echo "Setting up Android SDK..."
+      sdkmanager "platforms;android-34" "build-tools;34.0.0"
+      echo "Android SDK ready!"
+vscode:
+  extensions:
+    - mathiasfrohlich.Kotlin
+    - naco-siren.gradle-language
+    - vscjava.vscode-java-pack
