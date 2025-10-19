@@ -2,9 +2,9 @@ image: gitpod/workspace-android
 tasks:
   - name: Setup Android SDK
     init: |
-      echo "Setting up Android SDK..."
+      echo "Установка Android SDK..."
       sdkmanager "platforms;android-34" "build-tools;34.0.0"
-      echo "Android SDK ready!"
+      echo "✅ Готово! Среда Android настроена."
 vscode:
   extensions:
     - mathiasfrohlich.Kotlin
